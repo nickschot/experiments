@@ -1,0 +1,26 @@
+{{! template-lint-disable no-inline-styles }}
+
+<div local-class="top-examples">
+  <SvgBox local-class="circle" style="border-radius: 50px;height:100px;width:100px;" @strokeWidth={{2}} @simpleAnimation={{false}}>
+    Circle
+  </SvgBox>
+  <button local-class="btn" type="button">
+    <SvgBox style="border-radius: 4px;">
+      Button
+    </SvgBox>
+  </button>
+</div>
+
+<SvgBox local-class="svg-box" style="border-radius: 4px;" @strokeWidth={{1}} @simpleAnimation={{false}}>
+  <h3>Content</h3>
+  <p>This is some text.</p>
+</SvgBox>
+
+<SvgBox local-class="svg-box" style="border-radius: 4px;" @strokeWidth={{1}} @simpleAnimation={{true}}>
+  <h3>Content</h3>
+  <p>This is some text.</p>
+</SvgBox>
+
+<p class="description">
+  A component which renders a responsive SVG background which animates itself. Choice of a one and a two-part animation.
+</p>

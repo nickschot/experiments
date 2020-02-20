@@ -1,0 +1,50 @@
+h1 {
+  font-weight: lighter;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 60rem;
+  margin: 0 auto 3rem auto;
+  background: #FFF;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+
+  & > nav {
+    width: 15rem;
+    border-right: 1px solid #CCC;
+
+    & a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 1rem;
+      transition: all 0.15s;
+
+      &:hover {
+        background: rgba(255,204,129, 0.5);
+        background: linear-gradient(-35deg, rgba(255,204,129,0.25) 0%, rgba(255,104,0,0.25) 100%);
+      }
+
+      &:global(.active) {
+        background: rgb(255,204,129);
+        background: linear-gradient(-35deg, rgba(255,204,129,1) 0%, rgba(255,104,0,1) 100%);
+        color: #FFF;
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+  color: #666;
+}

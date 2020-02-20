@@ -1,0 +1,16 @@
+@import 'sanitize.css';
+@import 'sanitize.css/typography.css';
+@import 'sanitize.css/forms.css';
+
+body {
+  background: #EEE;
+}
+
+:global(.description) {
+  margin: 0 3rem 3rem;
+  border: 1px solid #DDD;
+  background: #FAFBFC;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  color: #333;
+}

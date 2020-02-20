@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<h1>Experiments</h1>
 
-{{outlet}}
+<div local-class="wrapper">
+  <nav>
+    <ul>
+      <li><LinkTo @route="tracking-button">Tracking Button</LinkTo></li>
+      <li><LinkTo @route="svg-box">SVG Box</LinkTo></li>
+    </ul>
+  </nav>
+
+  <main local-class="main">
+    {{outlet}}
+  </main>
+</div>
+
+<footer local-class="footer">
+  &copy; 2020 - Nick Schot<br>
+  <a href="https://nickschot.nl" target="_blank" rel="noopener noreferrer">nickschot.nl</a>
+</footer>

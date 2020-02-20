@@ -1,0 +1,43 @@
+<div local-class="root" ...attributes {{did-insert this.render}} {{did-resize this.render}}>
+  <div local-class="content">
+    {{yield}}
+  </div>
+  <svg local-class="svg" width={{this.width}} height={{this.height}} viewBox={{this.viewBox}}>
+    <path
+      local-class="bg"
+      d="{{this.path}}"
+      fill="none"
+    />
+    
+    {{#if @simpleAnimation}}
+      <path
+        local-class="border"
+        d="{{this.path}}"
+        stroke-width="{{this.strokeWidth}}"
+        stroke-dasharray="{{this.circumference}}"
+        stroke-dashoffset="{{this.circumference}}"
+        stroke="#88929c"
+        fill="none"
+      />
+    {{else}}
+      <path
+        local-class="border"
+        d="{{this.pathTop}}"
+        stroke-width="{{this.strokeWidth}}"
+        stroke-dasharray="{{this.halfCircumference}}"
+        stroke-dashoffset="{{this.halfCircumference}}"
+        stroke="#88929c"
+        fill="none"
+      />
+      <path
+        local-class="border"
+        d="{{this.pathBottom}}"
+        stroke-width="{{this.strokeWidth}}"
+        stroke-dasharray="{{this.halfCircumference}}"
+        stroke-dashoffset="{{this.halfCircumference}}"
+        stroke="#88929c"
+        fill="none"
+      />
+    {{/if}}
+  </svg>
+</div>

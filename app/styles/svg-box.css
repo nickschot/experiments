@@ -1,0 +1,35 @@
+.top-examples {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: block;
+  padding: 0;
+  border: none;
+}
+
+.svg-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 2.5rem auto;
+
+  & h3 {
+    font-size: 2em;
+    font-weight: lighter;
+    margin: 0 0 0.5rem;
+  }
+
+  & p {
+    margin-top: 0;
+  }
+}

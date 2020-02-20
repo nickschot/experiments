@@ -1,10 +1,27 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const { browsers } = require('./config/targets');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+
+    cssModules: {
+      headerModules: [
+        'experiments/styles/app'
+      ],
+      plugins: [
+        require('postcss-normalize', { browsers }),
+        require('postcss-preset-env')({
+          browsers,
+          stage: 3,
+          features: {
+            'nesting-rules': true
+          }
+        })
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
