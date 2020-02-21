@@ -1,5 +1,5 @@
 <div local-class="root" ...attributes {{did-insert this.render}} {{did-resize this.render}}>
-  <div local-class="content">
+  <div local-class="content" data-test-svg-box-content>
     {{yield}}
   </div>
   <svg local-class="svg" width={{this.width}} height={{this.height}} viewBox={{this.viewBox}}>
@@ -7,8 +7,9 @@
       local-class="bg"
       d="{{this.path}}"
       fill="none"
+      data-test-svg-box-bg
     />
-    
+
     {{#if @simpleAnimation}}
       <path
         local-class="border"
@@ -18,6 +19,7 @@
         stroke-dashoffset="{{this.circumference}}"
         stroke="#88929c"
         fill="none"
+        data-test-svg-box-border-simple
       />
     {{else}}
       <path
@@ -28,6 +30,7 @@
         stroke-dashoffset="{{this.halfCircumference}}"
         stroke="#88929c"
         fill="none"
+        data-test-svg-box-border-top
       />
       <path
         local-class="border"
@@ -37,6 +40,7 @@
         stroke-dashoffset="{{this.halfCircumference}}"
         stroke="#88929c"
         fill="none"
+        data-test-svg-box-border-bottom
       />
     {{/if}}
   </svg>
