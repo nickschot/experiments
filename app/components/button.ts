@@ -13,15 +13,24 @@ function getAngle(originX: number, originY: number, projectionX: number, project
   return 360 - ((angle < 0) ? (360 + angle) : angle);
 }
 
-interface ButtonArgs {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface ButtonArgs {
+  onClick: (e: Event) => void;
+}
 
 export default class Button extends Component<ButtonArgs> {
   @service cursorTracker!: CursorTrackerService;
 
   private boundTransformButton: (e: MouseEvent) => void;
   private button?: HTMLElement;
-  @tracked buttonStyle: string = '';
+  @tracked buttonStyle = '';
   @tracked animationClass = '';
+
+  get onClick(): (e: Event) => void {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    const fn = () => {};
+    return this.args.onClick ?? fn;
+  }
 
   constructor(owner: unknown, args: ButtonArgs) {
     super(owner, args);

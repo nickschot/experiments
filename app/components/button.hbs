@@ -1,12 +1,14 @@
 {{! template-lint-disable no-inline-styles}}
-<div local-class="btn-slot" ...attributes>
+<div local-class="btn-slot">
   <button
     local-class="btn {{this.animationClass}}"
     type="button"
     style={{this.buttonStyle}}
     {{on "mousedown" this.animateClick}}
     {{on "mouseup" this.stopAnimateClick}}
+    {{on "click" this.onClick}}
     {{ref this "button"}}
+    ...attributes
   >
     {{yield}}
   </button>
