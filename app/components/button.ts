@@ -28,7 +28,7 @@ export default class Button extends Component<ButtonArgs> {
 
   get onClick(): (e: Event) => void {
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    const fn = () => {};
+    const fn = (): void => {};
     return this.args.onClick ?? fn;
   }
 
@@ -39,7 +39,7 @@ export default class Button extends Component<ButtonArgs> {
     this.cursorTracker.add(this.boundTransformButton);
   }
 
-  willDestroy() {
+  willDestroy(): void {
     this.cursorTracker.remove(this.boundTransformButton);
   }
 
