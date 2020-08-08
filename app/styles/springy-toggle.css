@@ -1,0 +1,12 @@
+.springy-toggle {
+  padding: 5rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clamp {
+  margin-top: 2.5rem;
+  display: block;
+}

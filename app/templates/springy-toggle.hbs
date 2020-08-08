@@ -1,0 +1,12 @@
+<div local-class="springy-toggle">
+  <SpringyToggle @clamp={{this.clamp}}/>
+  <label local-class="clamp"><input type="checkbox" checked={{this.clamp}} {{on "change" (fn (mut this.clamp) (not this.clamp))}}/> Clamp</label>
+</div>
+
+<p class="description">
+  A spring loaded toggle component. For when you <b>really</b> want to toggle something.
+  <br><br>
+  <i><b>Note:</b> the current implementation is not a completely functional toggle by any means. Clicking & a11y have not been implemented (yet). It is purely an experimental component.</i>
+  <br><br>
+  <a href="https://github.com/nickschot/experiments/tree/master/app/components" target="_blank" rel="noopener noreferrer">Source</a>
+</p>

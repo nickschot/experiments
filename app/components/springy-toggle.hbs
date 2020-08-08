@@ -1,0 +1,12 @@
+<div local-class="springy-toggle" ...attributes>
+  {{!--<input local-class="checkbox" type="checkbox" checked={{this.checked}}>--}}
+  <div
+    local-class="toggle"
+    style={{this.style}}
+    {{did-pan
+      onPanStart=this.onPanStart
+      onPan=this.onPan
+      onPanEnd=this.onPanEnd
+      preventScroll=true
+    }}></div>
+</div>
